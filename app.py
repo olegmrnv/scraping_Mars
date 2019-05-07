@@ -12,7 +12,9 @@ def scrape():
     data = scrape_mars.scrape()
     mars_collection = mongo.db.mars_collection
     mars_collection.update({}, data, upsert=True)
-    return redirect("/")
+    db_data = mongo.db.mars_collection.find_one()
+    
+    return render_template("scrape.html", db_data = db_data)
 
 @app.route("/")
 def home():

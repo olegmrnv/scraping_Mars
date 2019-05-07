@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Facts about Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p></p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>    
+  </div>
+
+  <div class="container-fluid" style="padding-left:10%; padding-right:2%;">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Latest Mars News</h1> 
+        <h4>{{db_data.news_title}}</h4>{{db_data.news_p}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <h1>Featured Mars Image</h1>
+        <img src="{{db_data.featured_image_url}}" alt = "Featured Mars Image" width = 100%>
+      </div>
+      <br>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <div  style="border-style: solid; border-color: lightgrey; margin: 5px; padding-left:20px; padding-right:20px;">
+            <h4><b>Current Weather on Mars</b></h4>
+            <p>{{db_data.mars_weather}}</p>
+          </div>
+          <br>
+          <div>
+            <h4><b>Mars Facts</b></h4>
+            {{db_data.html_table|safe}}
+          </div>
+      </div>      
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1>Mars Hemispheres</h1>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-lg-5 col-md-5 col-sm-11 col-xs-11" style="background-color: beige; padding:2%;">
+          <h3>{{db_data.hemisphere_image_urls[0].title}}</h3>
+          <img src="{{db_data.hemisphere_image_urls[0].img_url}}" alt = "Featured Mars Image" width = 100%>
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-11 col-xs-11" style="background-color: beige; padding:2%;">
+          <h3>{{db_data.hemisphere_image_urls[1].title}}</h3>
+          <img src="{{db_data.hemisphere_image_urls[1].img_url}}" alt = "Featured Mars Image" width = 100%>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-5 col-md-5 col-sm-11 col-xs-11" style="background-color: beige; padding:2%;">
+          <h3>{{db_data.hemisphere_image_urls[2].title}}</h3>
+          <img src="{{db_data.hemisphere_image_urls[2].img_url}}" alt = "Featured Mars Image" width = 100%>
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-11 col-xs-11" style="background-color: beige; padding:2%;">
+          <h3>{{db_data.hemisphere_image_urls[3].title}}</h3>
+          <img src="{{db_data.hemisphere_image_urls[3].img_url}}" alt = "Featured Mars Image" width = 100%>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+</body>
+
+</html>
