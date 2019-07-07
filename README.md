@@ -7,3 +7,5 @@ I used Jupyter notebook file mission_to_mars.ipynb to work on each part of the c
 Scraping process requires having chromedriver.exe file, which opens web sites and pulls data. Afterwards data and links to images saved into MongoDB. Last step is rendering my template and placing all that scraped data into it. Scraping process triggered by pressing a button on initial HTML page. 
 
 Tools and libraries used here: Jupyter Notebook, BeautifulSoup, Pandas, chromedriver, MongoDB, Flask, flask_pymongo  and Requests/Splinter.
+
+To run this project on your local computer download this repo, make sure you have MongoDB installed and Python v3 (with flask and flask_pymongo libraries). Run "python app.py" in command line in root repository and navigate to http://127.0.0.1:5000/. Click on "Scrape new data" button. 
